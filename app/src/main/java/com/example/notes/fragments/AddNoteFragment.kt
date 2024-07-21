@@ -18,6 +18,9 @@ import com.example.notes.R
 import com.example.notes.databinding.FragmentAddNoteBinding
 import com.example.notes.model.Notes
 import com.example.notes.viewmodel.NotesViewModel
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 
 class AddNoteFragment : Fragment(), MenuProvider {
@@ -49,7 +52,7 @@ class AddNoteFragment : Fragment(), MenuProvider {
         val title = binding.addNoteTitle.text.toString().trim()
         val desc = binding.addNoteDesc.text.toString().trim()
         if(title.isNotEmpty()){
-            val note = Notes(0, title, desc)
+            val note = Notes(0, title, desc,getCurrentTime())
             viewModel.insertNote(note)
 
             Toast.makeText(notesView.context, "Note Saved", Toast.LENGTH_SHORT).show()
@@ -73,6 +76,14 @@ class AddNoteFragment : Fragment(), MenuProvider {
             }
             else -> false
         }
+    }
+
+    private fun getCurrentTime(): String {
+        val now = Date()
+
+        val sdf = SimpleDateFormat("dd-MM-yyyy | HH:mm", Locale.getDefault())
+
+        return sdf.format(now)
     }
 
 

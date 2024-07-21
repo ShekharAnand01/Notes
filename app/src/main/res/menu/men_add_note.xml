@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/saveMenu"
-        android:title="Save"
+        android:title="@string/save"
         android:iconTint="#ffff"
         app:showAsAction="always" />
 </menu>

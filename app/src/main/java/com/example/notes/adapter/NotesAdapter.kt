@@ -40,6 +40,7 @@ class NotesAdapter : RecyclerView.Adapter<NotesAdapter.NoteViewHolder>() {
          val currentNote = differ.currentList[position]
         holder.binding.noteTitle.text=currentNote.title
         holder.binding.noteDesc.text=currentNote.description
+        holder.binding.currentTime.text=currentNote.currentTime
 
         holder.itemView.setOnClickListener{
             val action = HomeFragmentDirections.actionHomeFragmentToEditNoteFragment(currentNote)

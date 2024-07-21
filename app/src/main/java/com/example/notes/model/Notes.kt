@@ -12,5 +12,6 @@ data class Notes(
     @PrimaryKey(autoGenerate = true)
     var id: Int,
     var title: String,
-    var description: String
+    var description: String,
+    var currentTime: String
 ) : Parcelable

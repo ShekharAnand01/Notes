@@ -24,7 +24,7 @@
                 android:layout_weight="200"
                 android:textColor="@color/red"
                 android:fontFamily="@font/poppins"
-                android:text="Note Title"
+                android:text="@string/note_title"
                 android:textStyle="bold"
                 android:textSize="18sp"/>
 
@@ -34,10 +34,19 @@
                 android:id="@+id/noteDesc"
                 android:layout_marginTop="8dp"
                 android:maxHeight="170dp"
-                android:text="Description"
+                android:text="@string/description"
                 android:textSize="14sp"
                 android:fontFamily="@font/poppins"
                 android:textColor="@color/pink"/>
+
+            <TextView
+                android:id="@+id/currentTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins"
+                android:text="@string/currenttime"
+                android:textColor="#090909" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
