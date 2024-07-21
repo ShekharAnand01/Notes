@@ -101,7 +101,7 @@ class EditNoteFragment : Fragment(),MenuProvider {
     private fun getCurrentTime(): String {
         val now = Date()
 
-        val sdf = SimpleDateFormat("dd-MM | HH:mm", Locale.getDefault())
+        val sdf = SimpleDateFormat("dd-MM-yyyy | HH:mm", Locale.getDefault())
 
         return sdf.format(now)
     }
